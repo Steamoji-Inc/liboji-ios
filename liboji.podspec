@@ -7,7 +7,7 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'liboji'
+  s.name             = 'Steamoji'
   s.version          = '0.1.0'
   s.summary          = 'Steamoji iOS Library'
 

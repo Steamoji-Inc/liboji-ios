@@ -11,11 +11,16 @@ import Macaroons
 
 public typealias SessionID = String
 
-
 public struct SessionArtifacts: Encodable {
     public var note: String?
     public var videoURL: String?
     public var bonusPoints: Int?
+
+    public init(note: String?, videoURL: String?, bonusPoints: Int?) {
+        self.note = note
+        self.videoURL = videoURL
+        self.bonusPoints = bonusPoints
+    }
 }
 
 public struct UpdateSessionArtifacts: Encodable {
