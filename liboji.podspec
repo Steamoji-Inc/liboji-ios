@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'Macaroons', { :git => 'https://github.com/jb55/macaroon-swift.git', :branch => 'master' } 
+  s.dependency 'Macaroons'
 end
