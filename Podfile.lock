@@ -1,0 +1,21 @@
+PODS:
+  - Macaroons (0.1.0)
+
+DEPENDENCIES:
+  - "Macaroons (from `git@github.com:jb55/macaroon-swift.git`)"
+
+EXTERNAL SOURCES:
+  Macaroons:
+    :git: "git@github.com:jb55/macaroon-swift.git"
+
+CHECKOUT OPTIONS:
+  Macaroons:
+    :commit: c4d9d88f2ffe3f79edd4c27a961feb05bf9bb371
+    :git: "git@github.com:jb55/macaroon-swift.git"
+
+SPEC CHECKSUMS:
+  Macaroons: d32521ad62d657b7e481b382489f05569b26127a
+
+PODFILE CHECKSUM: d653070dc96d13106fcd7d1cccb102cd19c263c3
+
+COCOAPODS: 1.9.3

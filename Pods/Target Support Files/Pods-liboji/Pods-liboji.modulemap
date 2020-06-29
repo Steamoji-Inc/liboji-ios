@@ -1,0 +1,6 @@
+framework module Pods_liboji {
+  umbrella header "Pods-liboji-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Macaroons {
+  umbrella header "Macaroons-umbrella.h"
+
+  export *
+  module * { export * }
+}

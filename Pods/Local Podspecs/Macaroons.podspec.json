@@ -1,0 +1,22 @@
+{
+  "name": "Macaroons",
+  "version": "0.1.0",
+  "summary": "Better auth cookies",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/jb55/macaroon-swift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "William Casarin": "jb55@jb55.com"
+  },
+  "source": {
+    "git": "https://github.com/jb55/macaroon-swift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftMacaroons/**/*"
+}

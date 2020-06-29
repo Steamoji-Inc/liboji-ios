@@ -1,0 +1,3 @@
+swiftpm/
+*.xcuserdatad/
+.DS_Store
