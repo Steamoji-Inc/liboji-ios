@@ -10,35 +10,42 @@ import Foundation
 import Macaroons
 
 public func hasIdentojiExpired(_ identoji: Macaroon) -> Bool {
-    var hadExpire = false
-    for caveat in identoji.caveats {
-        if caveat.id.starts(with: "expire") {
-            hadExpire = true
+    let m_str_n = findCaveat(macaroon: identoji, startsWith: "expire")
 
-            let parts = caveat.id.split(separator: Character(" "))
-
-            // malformed, just return expired to get a new one
-            if parts.count != 2 {
-                return true
-            }
-
-            guard let n = Int(parts[1]) else {
-                return true
-            }
-
-            if Int(NSDate().timeIntervalSince1970) >= n {
-                return true
-            }
-        }
+    guard let str_n = m_str_n else {
+        return true
     }
 
-    // no expire caveat?
-    if !hadExpire {
-        print("UNUSUAL: identoji doesn't have an expire caveat")
+    guard let n = Int(str_n) else {
+        return true
+    }
+
+    if Int(NSDate().timeIntervalSince1970) >= n {
         return true
     }
 
     // no expire caveat has expired
     return false
+}
+
+public func getIdentojiUserId(_ identoji: Macaroon) -> String? {
+    return findCaveat(macaroon: identoji, startsWith: "user")
+}
+
+public func findCaveat(macaroon: Macaroon, startsWith: String) -> String? {
+    for caveat in macaroon.caveats {
+        if caveat.id.starts(with: startsWith) {
+            let parts = caveat.id.split(separator: Character(" "))
+
+            // malformed?
+            if parts.count != 2 {
+                return nil
+            }
+
+            return String(parts[1])
+        }
+    }
+
+    return nil
 }
 
