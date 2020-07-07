@@ -6,6 +6,6 @@ target 'liboji' do
   use_frameworks!
 
   # Pods for liboji
-  pod 'Macaroons', :git => 'git@github.com:jb55/macaroon-swift.git'
+  pod 'Macaroons', :git => 'git@github.com:jb55/macaroon-swift.git', :commit => '52658bea36d3346c0949d14fec75a961566a4f23'
 
 end
