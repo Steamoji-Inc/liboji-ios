@@ -9,7 +9,7 @@
 import Foundation
 import Macaroons
 
-func hasIdentojiExpired(_ identoji: Macaroon) -> Bool {
+public func hasIdentojiExpired(_ identoji: Macaroon) -> Bool {
     var hadExpire = false
     for caveat in identoji.caveats {
         if caveat.id.starts(with: "expire") {
