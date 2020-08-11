@@ -33,12 +33,13 @@ public class Session: Codable {
     public var dateTime: String
     public var workStation: Int?
     public var step: Int?
-    public var note: String
+    public var note: String?
     public var artefactVideoURL: String?
+    public var artefactThumbnailURL: String?
     public var bonusPoints: Int
-    public var apprentice: User
-    public var project: Project
-    public var mission: Mission
+    public var apprentice: User?
+    public var project: Project?
+    public var mission: Mission?
 
     private var _startTime: Date?
 

@@ -79,9 +79,9 @@ func jsonHttpRequest<T: Decodable>(req: URLRequest, cb: @escaping (RequestRes<T>
     httpRequest(req: req, decoder: decodeJSON, cb: cb )
 }
 
-func httpRequest<T>(req: URLRequest,
-                    decoder: @escaping ((Data) -> Result<T, Error>),
-                    cb: @escaping (RequestRes<T>) -> Void)
+public func httpRequest<T>(req: URLRequest, 
+                           decoder: @escaping ((Data) -> Result<T, Error>),
+                           cb: @escaping (RequestRes<T>) -> Void)
 {
     URLSession.shared.dataTask(with: req) { datas, resp, err in
         guard let resp = resp as? HTTPURLResponse else {
