@@ -18,6 +18,7 @@ query Sessions() {
         note
         dateTime
         artefactVideoURL
+        artefactThumbnailURL
         bonusPoints
         project {
             id
