@@ -14,11 +14,13 @@ public typealias SessionID = String
 public struct SessionArtifacts: Encodable {
     public var note: String?
     public var videoURL: String?
+    public var thumbnailURL: String?
     public var bonusPoints: Int?
 
-    public init(note: String?, videoURL: String?, bonusPoints: Int?) {
+    public init(note: String?, videoURL: String?, thumbnailURL: String?, bonusPoints: Int?) {
         self.note = note
         self.videoURL = videoURL
+        self.thumbnailURL = thumbnailURL
         self.bonusPoints = bonusPoints
     }
 }

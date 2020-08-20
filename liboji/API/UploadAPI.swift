@@ -31,6 +31,18 @@ public func getArtifactUploadURL(
         callback: callback)
 }
 
+public func getThumbnailUploadURL(
+    apiHost: URL,
+    identoji: Macaroon,
+    callback: @escaping (RequestRes<URL>) -> Void)
+{
+    return getPresignedUploadURL(
+        apiHost: apiHost,
+        identoji: identoji,
+        filePrefix: "video-thumbnail-",
+        callback: callback)
+}
+
 public func getPresignedUploadURL(
     apiHost: URL,
     identoji: Macaroon,
