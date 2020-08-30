@@ -29,6 +29,7 @@ query Sessions() {
             firstName
             lastName
             familyId
+            avatarFilename
         }
         mission {
             id
