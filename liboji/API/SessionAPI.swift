@@ -16,6 +16,7 @@ query Sessions() {
         step
         id
         note
+        minutes
         dateTime
         artefactVideoURL
         artefactThumbnailURL

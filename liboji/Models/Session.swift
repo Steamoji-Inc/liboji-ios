@@ -36,6 +36,7 @@ public class Session: Codable {
     public var workStation: Int?
     public var step: Int?
     public var note: String?
+    public var minutes: Int?
     public var artefactVideoURL: String?
     public var artefactThumbnailURL: String?
     public var bonusPoints: Int
