@@ -35,6 +35,7 @@ query Sessions() {
             lastName
             familyId
             avatarFilename
+            note
         }
         mission {
             id
