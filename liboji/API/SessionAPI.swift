@@ -11,6 +11,10 @@ import Macaroons
 
 public let SessionsQuery = """
 query Sessions() {
+    organization {
+      workStationNum
+    }
+
     sessions {
         workStation
         step
@@ -46,10 +50,19 @@ mutation UpdateSessionArtifacts($artifacts: SessionArtifactInput!, $sessionID: I
 }
 """
 
+public struct AcademyStations: Decodable {
+    public var workStationNum: Int?
+}
+
+public struct AcademySessions: Decodable {
+    public var organization: AcademyStations
+    public var sessions: [Session]
+}
+
 public func loadActiveSessions(
     apiHost: URL,
     identoji: Macaroon,
-    completion: @escaping (RequestRes<[Session]>) -> Void)
+    completion: @escaping (RequestRes<AcademySessions>) -> Void)
 {
     let input: [String: Int] = [String: Int]()
 
@@ -58,8 +71,9 @@ public func loadActiveSessions(
         identoji: identoji,
         operation: "Sessions",
         query: SessionsQuery,
-        variables: input)
-    { (res: RequestRes<SessionsWrapper>) -> Void in completion(res.map { $0.sessions }) }
+        variables: input,
+        cb: completion
+    )
 }
 
 public func updateSessionArtifacts(
