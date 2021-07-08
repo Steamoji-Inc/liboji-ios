@@ -74,7 +74,7 @@ func decodeJSON<T: Decodable>(dat: Data) -> Result<T, Error> {
     }
 }
 
-func jsonHttpRequest<T: Decodable>(req: URLRequest, cb: @escaping (RequestRes<T>) -> Void)
+public func jsonHttpRequest<T: Decodable>(req: URLRequest, cb: @escaping (RequestRes<T>) -> Void)
 {
     httpRequest(req: req, decoder: decodeJSON, cb: cb )
 }

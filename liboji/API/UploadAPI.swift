@@ -27,7 +27,7 @@ public func getArtifactUploadURL(
     return getPresignedUploadURL(
         apiHost: apiHost,
         identoji: identoji,
-        filePrefix: "video-artifact-",
+        filePrefix: "video-artifact.mp4",
         callback: callback)
 }
 
@@ -39,7 +39,7 @@ public func getThumbnailUploadURL(
     return getPresignedUploadURL(
         apiHost: apiHost,
         identoji: identoji,
-        filePrefix: "video-thumbnail-",
+        filePrefix: "video-thumbnail.jpg",
         callback: callback)
 }
 

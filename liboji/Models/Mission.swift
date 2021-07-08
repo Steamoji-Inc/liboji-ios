@@ -12,5 +12,5 @@ public typealias MissionID = String
 
 public struct Mission: Codable {
     public var id: MissionID
-    public var title: String
+    public var title: String?
 }
