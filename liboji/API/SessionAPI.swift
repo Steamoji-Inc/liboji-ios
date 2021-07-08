@@ -33,6 +33,7 @@ query Sessions() {
             id
             firstName
             lastName
+            familyRole
             familyId
             avatarFilename
             note

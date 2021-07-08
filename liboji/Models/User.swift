@@ -15,6 +15,7 @@ public struct User: Codable {
     public var firstName: String?
     public var lastName: String?
     public var avatarFilename: String?
-    public var gender: String?
+    public var familyRole: String?
+    public var houseTeam: String?
     public var note: String?
 }
