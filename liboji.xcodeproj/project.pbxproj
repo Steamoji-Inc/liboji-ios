@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A8E34A5D8C604F6AE263F05 /* Pods_liboji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B8E13CF905873AA69C08ED /* Pods_liboji.framework */; };
+		4C14267626AEF433008A05DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14267526AEF433008A05DF /* Assets.swift */; };
 		4C7BF88224AA7E0800EB0327 /* PresignedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */; };
 		4C7BF88324AA7E0800EB0327 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87524AA7E0800EB0327 /* Session.swift */; };
 		4C7BF88424AA7E0800EB0327 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87624AA7E0800EB0327 /* Mission.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		3C9D5B886EE3AD22FF1326DF /* Pods-liboji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-liboji.debug.xcconfig"; path = "Target Support Files/Pods-liboji/Pods-liboji.debug.xcconfig"; sourceTree = "<group>"; };
+		4C14267526AEF433008A05DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresignedURL.swift; sourceTree = "<group>"; };
 		4C7BF87524AA7E0800EB0327 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4C7BF87624AA7E0800EB0327 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		4C9C28E024B4EE46002731BC /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				4C14267526AEF433008A05DF /* Assets.swift */,
 				4C9C28E124B4EE5F002731BC /* TokenUtils.swift */,
 			);
 			path = Util;
@@ -246,6 +249,7 @@
 				4C7BF88D24AA7E0800EB0327 /* UploadAPI.swift in Sources */,
 				4C9C28E224B4EE5F002731BC /* TokenUtils.swift in Sources */,
 				4C7BF88C24AA7E0800EB0327 /* SessionAPI.swift in Sources */,
+				4C14267626AEF433008A05DF /* Assets.swift in Sources */,
 				4C7BF88524AA7E0800EB0327 /* Auth.swift in Sources */,
 				4C7BF88824AA7E0800EB0327 /* Project.swift in Sources */,
 				4C7BF88624AA7E0800EB0327 /* Plumbing.swift in Sources */,
