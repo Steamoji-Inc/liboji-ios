@@ -40,6 +40,7 @@ public class Session: Codable {
     public var artefactVideoURL: String?
     public var artefactThumbnailURL: String?
     public var bonusPoints: Int
+    public var projectId: String?
     public var apprentice: User?
     public var project: Project?
     public var mission: Mission?
