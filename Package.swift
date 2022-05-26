@@ -9,7 +9,7 @@ let package = Package(
         ],
         dependencies: [
             .package(
-                url: "https://github.com/jb55/macaroon-swift", 
+                url: "https://github.com/jb55/macaroon-swift.git", 
                 from: "0.2.1"
             )
         ],
