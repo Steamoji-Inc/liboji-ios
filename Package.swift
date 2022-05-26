@@ -10,7 +10,7 @@ let package = Package(
         dependencies: [
             .package(
                 url: "https://github.com/jb55/macaroon-swift", 
-                from: "0.2"
+                from: "0.2.1"
             )
         ],
         targets: [
