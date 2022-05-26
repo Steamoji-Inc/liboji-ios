@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A8E34A5D8C604F6AE263F05 /* Pods_liboji.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2B8E13CF905873AA69C08ED /* Pods_liboji.framework */; };
 		4C14267626AEF433008A05DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14267526AEF433008A05DF /* Assets.swift */; };
 		4C7BF88224AA7E0800EB0327 /* PresignedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */; };
 		4C7BF88324AA7E0800EB0327 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87524AA7E0800EB0327 /* Session.swift */; };
@@ -22,6 +21,7 @@
 		4C7BF88C24AA7E0800EB0327 /* SessionAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF88024AA7E0800EB0327 /* SessionAPI.swift */; };
 		4C7BF88D24AA7E0800EB0327 /* UploadAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF88124AA7E0800EB0327 /* UploadAPI.swift */; };
 		4C9C28E224B4EE5F002731BC /* TokenUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9C28E124B4EE5F002731BC /* TokenUtils.swift */; };
+		4CC1808E283FFBE300A5EE2D /* Macaroons in Frameworks */ = {isa = PBXBuildFile; productRef = 4CC1808D283FFBE300A5EE2D /* Macaroons */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,7 +37,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3C9D5B886EE3AD22FF1326DF /* Pods-liboji.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-liboji.debug.xcconfig"; path = "Target Support Files/Pods-liboji/Pods-liboji.debug.xcconfig"; sourceTree = "<group>"; };
 		4C14267526AEF433008A05DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresignedURL.swift; sourceTree = "<group>"; };
 		4C7BF87524AA7E0800EB0327 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
@@ -53,8 +52,6 @@
 		4C7BF88124AA7E0800EB0327 /* UploadAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadAPI.swift; sourceTree = "<group>"; };
 		4C9C28E124B4EE5F002731BC /* TokenUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenUtils.swift; sourceTree = "<group>"; };
 		4CF7A62924AA5A0F0014B507 /* libliboji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libliboji.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		85FADB46A11B6C43B914810B /* Pods-liboji.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-liboji.release.xcconfig"; path = "Target Support Files/Pods-liboji/Pods-liboji.release.xcconfig"; sourceTree = "<group>"; };
-		F2B8E13CF905873AA69C08ED /* Pods_liboji.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_liboji.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,22 +59,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A8E34A5D8C604F6AE263F05 /* Pods_liboji.framework in Frameworks */,
+				4CC1808E283FFBE300A5EE2D /* Macaroons in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11780F7EA60071E1A8212D25 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3C9D5B886EE3AD22FF1326DF /* Pods-liboji.debug.xcconfig */,
-				85FADB46A11B6C43B914810B /* Pods-liboji.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		4C7BF87324AA7E0800EB0327 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +113,6 @@
 			children = (
 				4CF7A62B24AA5A0F0014B507 /* liboji */,
 				4CF7A62A24AA5A0F0014B507 /* Products */,
-				11780F7EA60071E1A8212D25 /* Pods */,
-				BDCACFAC93DBCC56F26CE3A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,14 +135,6 @@
 			path = liboji;
 			sourceTree = "<group>";
 		};
-		BDCACFAC93DBCC56F26CE3A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F2B8E13CF905873AA69C08ED /* Pods_liboji.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,7 +142,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF7A63024AA5A0F0014B507 /* Build configuration list for PBXNativeTarget "liboji" */;
 			buildPhases = (
-				069D325C08D97BA0F0B02ECB /* [CP] Check Pods Manifest.lock */,
 				4CF7A62524AA5A0F0014B507 /* Sources */,
 				4CF7A62624AA5A0F0014B507 /* Frameworks */,
 				4CF7A62724AA5A0F0014B507 /* CopyFiles */,
@@ -174,6 +151,9 @@
 			dependencies = (
 			);
 			name = liboji;
+			packageProductDependencies = (
+				4CC1808D283FFBE300A5EE2D /* Macaroons */,
+			);
 			productName = liboji;
 			productReference = 4CF7A62924AA5A0F0014B507 /* libliboji.a */;
 			productType = "com.apple.product-type.library.static";
@@ -202,6 +182,9 @@
 				Base,
 			);
 			mainGroup = 4CF7A62024AA5A0F0014B507;
+			packageReferences = (
+				4CC1808C283FFBE300A5EE2D /* XCRemoteSwiftPackageReference "macaroon-swift" */,
+			);
 			productRefGroup = 4CF7A62A24AA5A0F0014B507 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,31 +193,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		069D325C08D97BA0F0B02ECB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-liboji-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CF7A62524AA5A0F0014B507 /* Sources */ = {
@@ -377,7 +335,6 @@
 		};
 		4CF7A63124AA5A0F0014B507 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C9D5B886EE3AD22FF1326DF /* Pods-liboji.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";
@@ -390,7 +347,6 @@
 		};
 		4CF7A63224AA5A0F0014B507 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85FADB46A11B6C43B914810B /* Pods-liboji.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				OTHER_LDFLAGS = "-ObjC";
@@ -423,6 +379,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CC1808C283FFBE300A5EE2D /* XCRemoteSwiftPackageReference "macaroon-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jb55/macaroon-swift";
+			requirement = {
+				kind = revision;
+				revision = 3eae1923ef5bb41ccf02c216234ae64e73146e94;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CC1808D283FFBE300A5EE2D /* Macaroons */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CC1808C283FFBE300A5EE2D /* XCRemoteSwiftPackageReference "macaroon-swift" */;
+			productName = Macaroons;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4CF7A62124AA5A0F0014B507 /* Project object */;
 }
