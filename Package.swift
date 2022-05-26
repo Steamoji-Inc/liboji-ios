@@ -7,7 +7,12 @@ let package = Package(
         products: [
             .library(name: "liboji", targets: ["liboji"])
         ],
-        dependencies: [],
+        dependencies: [
+            .package(
+                url: "https://github.com/jb55/macaroon-swift", 
+                from: "master"
+            )
+        ],
         targets: [
             .target(name: "liboji",
                     path: "liboji")
