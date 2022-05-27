@@ -14,7 +14,6 @@ let package = Package(
             )
         ],
         targets: [
-            .target(name: "liboji",
-                    path: "liboji")
+            .target(name: "liboji", path: "liboji", dependencies: ["Macaroons"])
         ]
 )
