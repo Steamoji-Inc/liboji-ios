@@ -14,6 +14,6 @@ let package = Package(
             )
         ],
         targets: [
-            .target(name: "liboji", dependencies: ["Macaroons"], path: "liboji")
+            .target(name: "liboji", dependencies: ["macaroon-swift"], path: "liboji")
         ]
 )
