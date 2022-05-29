@@ -9,6 +9,11 @@ private struct OrgLocations: Decodable {
 public struct OrgLocation: Equatable, Decodable, Hashable, Identifiable {
     public let id: String
     public let name: String
+    
+    init(id: String, name: String) {
+        self.id = id
+        self.name = name
+    }
 
     public static func == (lhs: OrgLocation, rhs: OrgLocation) -> Bool {
         return lhs.id == rhs.id && lhs.name == rhs.name
