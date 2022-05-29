@@ -10,12 +10,12 @@ import Foundation
 import Macaroons
 
 public let SessionsQuery = """
-query Sessions() {
+query Sessions($locationId: ID) {
     organization {
       workStationNum
     }
 
-    sessions {
+    sessions(locationId: $locationId) {
         workStation
         step
         id
@@ -61,12 +61,17 @@ public struct AcademySessions: Decodable {
     public var sessions: [Session]
 }
 
+private struct LoadSessionsParams: Encodable {
+    public var locationId: String?
+}
+
 public func loadActiveSessions(
     apiHost: URL,
     identoji: Macaroon,
+    locationId: String?,
     completion: @escaping (RequestRes<AcademySessions>) -> Void)
 {
-    let input: [String: Int] = [String: Int]()
+    let input = LoadSessionsParams(locationId: locationId)
 
     gqlQuery(
         apiHost: apiHost,
