@@ -6,7 +6,7 @@ private struct OrgLocations: Decodable {
     public var organizationLocations: [OrgLocation]
 }
 
-public struct OrgLocation: Equatable, Decodable {
+public struct OrgLocation: Equatable, Decodable, Hashable, Identifiable {
     public let id: String
     public let name: String
 
