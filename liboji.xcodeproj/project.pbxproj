@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C14267626AEF433008A05DF /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C14267526AEF433008A05DF /* Assets.swift */; };
+		4C52191E2843DED0001E39CD /* OrganizationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C52191D2843DED0001E39CD /* OrganizationAPI.swift */; };
+		4C5219202843DEE0001E39CD /* ApprenticeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C52191F2843DEE0001E39CD /* ApprenticeAPI.swift */; };
 		4C7BF88224AA7E0800EB0327 /* PresignedURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */; };
 		4C7BF88324AA7E0800EB0327 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87524AA7E0800EB0327 /* Session.swift */; };
 		4C7BF88424AA7E0800EB0327 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7BF87624AA7E0800EB0327 /* Mission.swift */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		4C14267526AEF433008A05DF /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		4C52191D2843DED0001E39CD /* OrganizationAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationAPI.swift; sourceTree = "<group>"; };
+		4C52191F2843DEE0001E39CD /* ApprenticeAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApprenticeAPI.swift; sourceTree = "<group>"; };
 		4C7BF87424AA7E0800EB0327 /* PresignedURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresignedURL.swift; sourceTree = "<group>"; };
 		4C7BF87524AA7E0800EB0327 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		4C7BF87624AA7E0800EB0327 /* Mission.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
@@ -93,6 +97,8 @@
 		4C7BF87F24AA7E0800EB0327 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				4C52191F2843DEE0001E39CD /* ApprenticeAPI.swift */,
+				4C52191D2843DED0001E39CD /* OrganizationAPI.swift */,
 				4C7BF88024AA7E0800EB0327 /* SessionAPI.swift */,
 				4C7BF88124AA7E0800EB0327 /* UploadAPI.swift */,
 			);
@@ -201,6 +207,8 @@
 			files = (
 				4C7BF88424AA7E0800EB0327 /* Mission.swift in Sources */,
 				4C7BF88324AA7E0800EB0327 /* Session.swift in Sources */,
+				4C52191E2843DED0001E39CD /* OrganizationAPI.swift in Sources */,
+				4C5219202843DEE0001E39CD /* ApprenticeAPI.swift in Sources */,
 				4C7BF88724AA7E0800EB0327 /* User.swift in Sources */,
 				4C7BF88B24AA7E0800EB0327 /* SteamojiRequest.swift in Sources */,
 				4C7BF88224AA7E0800EB0327 /* PresignedURL.swift in Sources */,
