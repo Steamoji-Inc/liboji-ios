@@ -54,6 +54,22 @@ public struct ApprenticeStats: Decodable {
     public let levelName: String
     public let points: Int
     public let redeemed: Int
+
+    public init(
+        missionsComplete: Int,
+        projectsComplete: Int,
+        level: Int,
+        levelName: String,
+        points: Int,
+        redeemed: Int
+    ) {
+        self.missionsComplete = missionsComplete
+        self.projectsComplete = projectsComplete
+        self.level = level
+        self.levelName = levelName
+        self.points = points
+        self.redeemed = redeemed
+    }
 }
 
 public func fetchApprenticeMetadata(
