@@ -36,11 +36,20 @@ query ApprenticeMetadata($userId: ID!) {
 
 public struct Family: Decodable {
     public let houseTeam: String?
+
+    public init(houseTeam: String?) {
+        self.houseTeam = houseTeam
+    }
 }
 
 public struct ApprenticeMetadata: Decodable {
     public let apprenticeStats: ApprenticeStats
     public let userFamily: Family
+
+    public init(stats: ApprenticeStats, family: Family) {
+        self.apprenticeStats = stats
+        self.userFamily = family
+    }
 }
 
 public struct UserIdParam: Encodable {
