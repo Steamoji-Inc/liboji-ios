@@ -18,4 +18,9 @@ public struct User: Codable {
     public var familyRole: String?
     public var houseTeam: String?
     public var note: String?
+
+    public init(id: String) {
+        self.id = id
+    }
 }
+

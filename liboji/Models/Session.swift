@@ -47,6 +47,12 @@ public class Session: Codable {
 
     private var _startTime: Date?
 
+    public init(id: String, dateTime: String, bonusPoints: Int) {
+        self.id = id
+        self.dateTime = dateTime
+        self.bonusPoints = bonusPoints
+    }
+
     public func startTime() -> Date {
         guard let start = _startTime else {
             let dateFormatter = DateFormatter()
