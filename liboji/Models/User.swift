@@ -22,5 +22,15 @@ public struct User: Codable {
     public init(id: String) {
         self.id = id
     }
+
+    public init(id: String, firstName: String?, lastName: String?, avatarFilename: String?, familyRole: String?, houseTeam: String?, note: String?) {
+        self.id = id
+        self.firstName = firstName
+        self.lastName = lastName
+        self.avatarFilename = id
+        self.familyRole = familyRole
+        self.houseTeam = houseTeam
+        self.note = note
+    }
 }
 
