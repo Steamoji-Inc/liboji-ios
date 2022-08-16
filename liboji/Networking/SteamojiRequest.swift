@@ -42,7 +42,7 @@ public func gqlQuery<IN: Encodable, OUT: Decodable>(
 
 
 /// This is just gqlRequest but we also pass in our identoji Authorization header
-@available(iOS 13.0.0, *)
+@available(iOS 15.0, *)
 public func gqlQueryAsync<IN: Encodable, OUT: Decodable>(
     apiHost: URL,
     identoji: Macaroon,

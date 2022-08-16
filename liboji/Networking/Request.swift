@@ -64,7 +64,7 @@ public func gqlRequest<IN: Encodable, OUT: Decodable>(
     }
 }
 
-@available(iOS 13.0, *)
+@available(iOS 15.0, *)
 public func gqlRequestAsync<IN: Encodable, OUT: Decodable>(
     query: GQLRequest<IN>,
     req: inout URLRequest) async throws -> OUT
