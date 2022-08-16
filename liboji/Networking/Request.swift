@@ -64,6 +64,7 @@ public func gqlRequest<IN: Encodable, OUT: Decodable>(
     }
 }
 
+@available(iOS 13.0, *)
 public func gqlRequestAsync<IN: Encodable, OUT: Decodable>(
     query: GQLRequest<IN>,
     req: inout URLRequest) async throws -> OUT
@@ -100,6 +101,7 @@ public func jsonHttpRequest<T: Decodable>(req: URLRequest, cb: @escaping (Reques
     httpRequest(req: req, decoder: decodeJSON, cb: cb )
 }
 
+@available(iOS 15.0, *)
 public func jsonHttpRequestAsync<T: Decodable>(req: URLRequest) async throws -> T {
     return try await httpRequestAsync(req: req, decoder: decodeJSON)
 }
@@ -143,6 +145,7 @@ public func httpRequest<T>(req: URLRequest,
     }.resume()
 }
 
+@available(iOS 15.0, *)
 public func httpRequestAsync<T>(
     req: URLRequest,
     decoder: @escaping ((Data) -> Result<T, Error>) ) async throws -> T
