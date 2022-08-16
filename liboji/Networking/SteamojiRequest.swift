@@ -39,3 +39,27 @@ public func gqlQuery<IN: Encodable, OUT: Decodable>(
 
     gqlRequest(query: req, req: &httpReq, cb: cb)
 }
+
+
+/// This is just gqlRequest but we also pass in our identoji Authorization header
+public func gqlQueryAsync<IN: Encodable, OUT: Decodable>(
+    apiHost: URL,
+    identoji: Macaroon,
+    operation: String,
+    query: String,
+    variables: IN) async throws -> OUT
+{
+    let url = apiHost.appendingPathComponent("/query")
+
+    var httpReq = URLRequest(url: url)
+    let identojiStr = attenuateIdentoji(identoji: identoji).serialize()
+    let authHeader = "identoji \(identojiStr)"
+    httpReq.setValue(authHeader, forHTTPHeaderField: "authorization")
+
+    let req = GQLRequest(operationName: operation,
+                         variables: variables,
+                         query: query)
+
+    let res: OUT = try await gqlRequestAsync(query: req, req: &httpReq)
+    return res
+}

@@ -64,6 +64,27 @@ public func gqlRequest<IN: Encodable, OUT: Decodable>(
     }
 }
 
+public func gqlRequestAsync<IN: Encodable, OUT: Decodable>(
+    query: GQLRequest<IN>,
+    req: inout URLRequest) async throws -> OUT
+{
+    do {
+        req.httpBody = try JSONEncoder().encode(query)
+        req.httpMethod = "POST"
+        req.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    }
+    catch let err as EncodingError {
+        throw RequestError(respData: Data(), errorType: .encoding(err))
+    }
+    catch let unk {
+        throw RequestError(respData: Data(), errorType: .unknown("\(unk)"))
+    }
+
+    let res: GQLResponse<OUT> = try await jsonHttpRequestAsync(req: req)
+    return res.data
+}
+
+
 func decodeJSON<T: Decodable>(dat: Data) -> Result<T, Error> {
     do {
         let dat = try JSONDecoder().decode(T.self, from: dat)
@@ -79,7 +100,11 @@ public func jsonHttpRequest<T: Decodable>(req: URLRequest, cb: @escaping (Reques
     httpRequest(req: req, decoder: decodeJSON, cb: cb )
 }
 
-public func httpRequest<T>(req: URLRequest, 
+public func jsonHttpRequestAsync<T: Decodable>(req: URLRequest) async throws -> T {
+    return try await httpRequestAsync(req: req, decoder: decodeJSON)
+}
+
+public func httpRequest<T>(req: URLRequest,
                            decoder: @escaping ((Data) -> Result<T, Error>),
                            cb: @escaping (RequestRes<T>) -> Void)
 {
@@ -116,4 +141,28 @@ public func httpRequest<T>(req: URLRequest,
         }
 
     }.resume()
+}
+
+public func httpRequestAsync<T>(
+    req: URLRequest,
+    decoder: @escaping ((Data) -> Result<T, Error>) ) async throws -> T
+{
+    let (dat, resp) = try await URLSession.shared.data(for: req)
+
+    guard let resp = resp as? HTTPURLResponse else {
+        throw RequestError(response: nil, respData: dat, errorType: .domain)
+    }
+
+    if resp.statusCode < 200 || resp.statusCode >= 300 {
+        throw RequestError(response: resp, respData: dat, errorType: .status(resp.statusCode))
+    }
+
+    switch decoder(dat) {
+    case .success(let decoded):
+        return decoded
+    case .failure(let err as DecodingError):
+        throw RequestError(response: resp, respData: dat, errorType: .decoding(err))
+    case .failure(let unk):
+        throw RequestError(response: resp, respData: dat, errorType: .unknown("\(unk)"))
+    }
 }
