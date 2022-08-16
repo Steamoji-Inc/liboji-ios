@@ -34,11 +34,46 @@ query ApprenticeMetadata($userId: ID!) {
 }
 """
 
-public struct Family: Decodable {
-    public let houseTeam: String?
-
-    public init(houseTeam: String?) {
+public struct Family: Codable {
+    public var id: String?
+    public var name: String?
+    public var address1: String?
+    public var city: String?
+    public var country: String?
+    public var state: String?
+    public var phoneNumber: String?
+    public var isUpgraded: Bool?
+    public var houseTeam: String?
+    public var members: [User]?
+    
+    static var empty: Family {
+        return Family(id: nil, name: nil, address1: nil, city: nil, country: nil, state: nil, phoneNumber: nil, isUpgraded: nil, houseTeam: nil, members: nil)
+    }
+    
+    public init(id: String?, name: String?, address1: String?, city: String?, country: String?, state: String?, phoneNumber: String?, isUpgraded: Bool?, houseTeam: String?, members: [User]?) {
+        self.id = id
+        self.name = name
+        self.address1 = address1
+        self.city = city
+        self.country = country
+        self.state = state
+        self.phoneNumber = phoneNumber
+        self.isUpgraded = isUpgraded
         self.houseTeam = houseTeam
+        self.members = members
+    }
+    
+    public init(other: Family) {
+        self.id = other.id
+        self.name = other.name
+        self.address1 = other.address1
+        self.city = other.city
+        self.country = other.country
+        self.state = other.state
+        self.phoneNumber = other.phoneNumber
+        self.isUpgraded = other.isUpgraded
+        self.houseTeam = other.houseTeam
+        self.members = other.members ?? []
     }
 }
 
