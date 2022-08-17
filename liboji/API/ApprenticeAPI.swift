@@ -133,3 +133,17 @@ public func fetchApprenticeMetadata(
         cb: completion
     )
 }
+
+public func fetch_apprentice_metadata(
+    apiHost: URL,
+    identoji: Macaroon,
+    userId: String) async throws -> ApprenticeMetadata
+{
+    let input = UserIdParam(userId: userId)
+    return try await gqlQueryAsync(
+        apiHost: apiHost,
+        identoji: identoji,
+        operation: "ApprenticeMetadata",
+        query: ApprenticeMetadataQuery,
+        variables: input)
+}
