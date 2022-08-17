@@ -134,6 +134,7 @@ public func fetchApprenticeMetadata(
     )
 }
 
+@available(iOS 15.0, *)
 public func fetch_apprentice_metadata(
     apiHost: URL,
     identoji: Macaroon,
