@@ -47,10 +47,11 @@ public class Session: Codable {
 
     private var _startTime: Date?
 
-    public init(id: String, dateTime: String, bonusPoints: Int) {
+    public init(id: String, dateTime: String, bonusPoints: Int, artefactVideoURL: String?) {
         self.id = id
         self.dateTime = dateTime
         self.bonusPoints = bonusPoints
+        self.artefactVideoURL = artefactVideoURL
     }
 
     public func startTime() -> Date {
